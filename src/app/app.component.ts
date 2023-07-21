@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = '04-components-data-binding-assignment';
+  oddNumbers: number[] = [];
+  evenNumbers: number[] = [];
+
+  onIntervalFired(counter: number): void {
+    if (counter % 2 === 0) {
+      this.evenNumbers.push(counter);
+    } else {
+      this.oddNumbers.push(counter);
+    }
+  }
 }
